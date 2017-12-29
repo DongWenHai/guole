@@ -1,0 +1,50 @@
+<div class="homesearch">
+	<ion-header-bar class="bar-balanced item-input-inset">
+		<div class="button button-clear" ng-click="goState('footer.home')">
+			<i class="icon ion-ios-arrow-left icon-light"></i>
+		</div>
+		<div class="item-input-wrapper light-bg">
+			<input type="text" name="" placeholder="搜你想要的" autofocus ng-model="searchContent" />
+			<div class="button button-clear" ng-click="addHistory()">
+				<i class="icon ion-android-search placeholder-icon"></i>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="hotsearch padding white-bg">
+			<h4>热门搜索</h4>			
+			<div class="row row-wrap">
+				<div class="col col-33" ng-repeat="item in hotsearch track by $index">
+					<span class="search-name balanced-bg light">{{item.content}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="hotsearch padding white-bg">
+			<h4>快冲移动电源</h4>			
+			<div class="row row-wrap">
+				<div class="col col-33" ng-repeat="item in fastpower track by $index">
+					<span class="search-name balanced-bg light">{{item.content}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="hotsearch padding white-bg">
+			<h4>应急电源</h4>			
+			<div class="row row-wrap">
+				<div class="col col-33" ng-repeat="item in emergencySupply track by $index">
+					<span class="search-name balanced-bg light">{{item.content}}</span>
+				</div>
+				<div class="col col-33 col-offset-67 balanced">查看全部>></div>
+			</div>
+		</div>
+		<div class="padding lightbox"></div>
+		<div class="factorysearch list white-bg">
+			<a class="item item-icon-left factory-list" ng-repeat="key in factorysearch track by $index">
+				<i class="icon ion-ios-clock-outline"></i>
+				{{key.content}}
+			</a>
+		</div>
+		<div class="balanced clearfactory white-bg" ng-click="clearHistory()">
+			清除历史记录
+		</div>
+	</ion-content>
+</div>

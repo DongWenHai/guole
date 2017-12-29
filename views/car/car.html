@@ -1,0 +1,45 @@
+<div class="car">
+	<ion-header-bar class="bar-balanced" align-title="center">
+		<h1 class="title">购物车</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="car-container">
+			<ion-list>
+				<ion-item class="item-self clearfix" ng-repeat="item in cardata track by $index">
+					<span class="item-checkbox-self" ng-class="{'checkbutton-checked':item.checkitem,'checkbutton-check':!item.checkitem}">
+						<input type="checkbox" ng-model="item.checkitem" ng-change="changeCheckbox()">
+					</span>
+					<span class="car-img fl">
+						<img class="full-image" ng-src="{{item.imgsrc}}">
+					</span>
+					<span class="car-infor fl">
+						<h3>{{item.productName}}</h3>
+						<p>商品编码：{{item.identifier}}</p>
+						<div class="clearfix car-price">
+							<span class="assertive fl">￥{{item.price}}</span>
+							<span class="fr clearfix editNum">
+								<span class="align-center numButton fr" ng-click="increaseNum($index)">+</span>
+								<span class="align-center numButton numInput fr"><input type="text" ng-model="item.numb" ng-change="countTotalMoney()"></span>
+								<span class="align-center numButton fr" ng-click="decreaseNum($index)">-</span>
+							</span>
+						</div>
+					</span>
+					<ion-option-button class="button-balanced"
+                       ng-click="delete($index)">
+				      删除
+				    </ion-option-button>
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
+	<div class="total white-bg">
+		<label>
+			<span class="checkbutton" ng-class="{'checkbutton-checked':allCheck,'checkbutton-check':!allCheck}">
+				<input type="checkbox" ng-model="allCheck" ng-change="allSelect()"/>
+			</span>
+			<span>全选</span>
+		</label>
+		<span class="totalmoney padding-left assertive">合计：￥<span>{{totalMoney}}</span></span>
+		<span class="total-button fr align-center" ng-click="goConfirmPay()">立即结算</span>
+	</div>
+</div>

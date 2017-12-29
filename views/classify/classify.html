@@ -1,0 +1,26 @@
+<div class="classify">
+	<ion-header-bar class="bar-balanced item-input-inset">
+		<div class="button button-clear" ng-click="goState('footer.home')">
+			<i class="icon ion-ios-arrow-left icon-light"></i>
+		</div>
+		<div class="item-input-wrapper light-bg">
+			<input type="text" name="" placeholder="搜索：分类 商品" />
+			<div class="button button-clear">
+				<i class="icon ion-android-search placeholder-icon"></i>
+			</div>
+		</div>
+	</ion-header-bar>
+	<ion-content scroll="false">
+		<div class="row padding-none classify-content">
+			<ion-scroll direction="y" class="col col-25 padding-none">
+				<h4 class="balanced hotclassify-title" ng-click="goList('footer.classify.classifyhot')">热门分类</h4>
+				<ul class="classify-list white-bg">
+					<li ng-repeat="item in classifylistdata track by $index" ng-class="{'back-bg': $index == listIndex}" ng-click="goList($index)">{{item.cla}}</li>
+				</ul>
+			</ion-scroll>
+			<ion-scroll class="col col-75 padding-none">
+				<div ui-view></div>
+			</ion-scroll>
+		</div>
+	</ion-content>
+</div>

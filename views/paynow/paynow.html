@@ -1,0 +1,53 @@
+<div class="paynow">
+	<ion-header-bar class="bar-balanced" align-title="center">
+		<div class="button button-clear" ng-click="goState('confirmpay')">
+			<i class="icon ion-ios-arrow-left icon-light"></i>
+		</div>
+		<h1 class="title">支付宝支付</h1>
+	</ion-header-bar>
+
+	<ion-content>
+		<div class="pay-detail clearfix white-bg">
+			<div class="fl qrcode padding-right">
+				<img class="full-image" src="./images/scan@3x.png" alt="">
+			</div>
+			<div class="fl product-name">
+				<p ng-repeat="item in order track by $index">{{item.productName}}</p>
+			</div>
+			<div class="fl">
+				<p class="assertive">￥{{allMoney}}</p>
+				<i class="refresh icon ion-ios-refresh-empty balanced"></i>
+			</div>
+		</div>
+		<div class="select-bank clearfix padding-left padding-right white-bg">
+			<i class="icon ion-ios-circle-outline fl padding-right"></i>
+			<span class="fl padding-right">中国建设银行</span>
+			<span class="fl">**3435</span>
+			<span class="fr">
+				<i class="icon ion-ios-arrow-right"></i>
+				<span>支付<span class="assertive">{{allMoney}}</span>元</span>
+			</span>
+		</div>
+		<div class="pay-psd padding white-bg">
+			<h5>支付宝密码：</h5>
+			<div class="psd-box">
+				<input type="text" maxlength="6" autofocus ng-model="psdvalue" ng-change="changepsd(psdvalue)"/>
+				<ul class="clearfix">
+					<li class="fl"><span ng-class="{'unable':psdLength >= 1}"><i class="icon ion-record"></span></i></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 2}"><i class="icon ion-record"></span></i></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 3}"><i class="icon ion-record"></span></i></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 4}"><i class="icon ion-record"></span></i></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 5}"><i class="icon ion-record"></span></i></li>
+					<li class="fl last-border-none"><span ng-class="{'unable':psdLength >= 6}"><i class="icon ion-record"></span></i></li>
+				</ul>
+			</div>
+			<span class="balanced">忘记密码?</span>
+			<p class="psd-prompt">请输入6位密码</p>
+			<div class="row padding-none">
+				<div calss="col col-50">
+					<div class="button button-block button-small button-balanced light" ng-click="goPaysuccess()">确认付款</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</div>

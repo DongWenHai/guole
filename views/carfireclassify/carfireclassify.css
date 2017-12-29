@@ -1,0 +1,9 @@
+.carfireclassify .carfireclassify-container{
+	padding:10px;
+}
+.carfireclassify .carfireclassify-list p{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+	font-size: 12px;
+}

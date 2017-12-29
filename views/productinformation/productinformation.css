@@ -1,0 +1,42 @@
+.productinformation{
+
+}
+.active-border{
+	border-bottom:1px solid #65c413;
+}
+.productinformation-title{
+	display: inline-block;
+    height: 35px;
+    line-height: 35px;
+}
+.detailinfor-box{
+	border:1px solid #999999;
+	padding:10px;
+}
+.detailinfor-box>table{
+	margin:0 auto;
+}
+.detailinfor-box>table td{
+	border:1px solid #666666;
+	padding:5px;
+}
+.explain{
+	border-top:1px solid #999999;
+	border-bottom:1px solid #999999;
+	margin-top:10px;
+}
+.paylogo{
+	max-width: 80px;
+	display:inline-block;
+}
+.explain-content{
+	width:calc(100% - 80px);
+	display:inline-block;
+}
+.explain-content>p{
+	font-size:12px;
+	text-indent:2em;
+}
+.process{
+	
+}

@@ -1,0 +1,26 @@
+.homesearch .search-name{
+	display:block;
+	font-size:12px;
+	border-radius: 6px;
+	width:100%;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.homesearch .factory-list{
+	padding:6px;
+	padding-left:48px;
+	font-size:14px;
+}
+.homesearch .clearfactory{
+	font-size:12px;
+	text-align: center;
+	padding:15px 0;
+}
+.homesearch .factorysearch{
+	margin-bottom:0px;
+}
+.item-icon-left .icon, .item-icon-right .icon{
+	font-size:26px;
+}

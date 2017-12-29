@@ -1,0 +1,84 @@
+<div class="confirmpay">
+	<ion-header-bar class="bar-balanced" align-title="center">
+		<div class="button button-clear" ng-click="goState('footer.car')">
+			<i class="icon ion-ios-arrow-left icon-light"></i>
+		</div>
+		<h1 class="title">确认订单</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="takein-address">
+			<ul class="white-bg">
+				<li class="takein-address-title"><span>收货人</span></li>
+				<li><span>西门宇</span><span class="padding-left">135814562356</span></li>
+				<li class="takein-address-title"><span>收获地址</span></li>
+				<li>
+					<span>深圳市龙华卫东龙商务大厦A1513</span>
+					<span class="fr"><i class="icon-right-self icon ion-ios-arrow-right"></i></span>
+					
+				</li>
+				<li>
+					<span>配送日期</span>
+					<span class="padding-left balanced">9.15周五9：30-18：00</span>
+					<span class="fr"><i class="icon-right-self icon ion-ios-arrow-right"></i></span>					
+				</li>
+			</ul>
+		</div>
+		<div class="order-confirm">
+			<div class="order-container">			
+				<div class="order-list white-bg padding clearfix" ng-repeat="item in confirmdata track by $index">
+					<span class="order-image fl">
+						<img class="full-image" ng-src="{{item.imgsrc}}">
+					</span>
+					<span class="order-infor fr padding-left">
+						<h5>{{item.productName}}</h5>
+						<p class="color-self">商品编码：{{item.identifier}}</p>
+					</span>
+					<span class="fr order-numb">
+						<span class="color-self">数量&times;{{item.numb}}</span>
+						<span class="padding-left assertive">￥{{item.price}}</span>
+					</span>
+				</div>
+			</div>
+
+			<ul class="white-bg pay-information">
+				<li>
+					<span class="color-self">配送方式</span>
+					<span class="fr">
+						<span class="sendfoundslogo"><img src="./images/icons/SF-icon@3x.png"></span>
+						<span class="fr"><i class="icon-right-self icon ion-ios-arrow-right"></i></span>
+					</span>
+				</li>
+				<li>
+					<span class="color-self">配送费</span>
+					<span class="fr color-self">￥{{distributionFee}}</span>
+				</li>
+				<li>
+					<span class="color-self">实际支付</span>
+					<span class="fr">￥{{realpayMoney}}</span>
+				</li>
+			</ul>
+			<div class="item-divider-self"></div>
+			<div class="payfounds white-bg">
+				<ul>
+					<li class="clearfix">
+						<label>
+							<span class="fl paylogo"><img src="./images/icons/pay@3x.png"></span>
+							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==0,'checkbutton-check':value ==1}"><input type="radio" name="founds" value="0" ng-model="value"></span>
+						</label>						
+					</li>
+					<li class="clearfix">
+						<label>
+							<span class="fl paylogo"><img src="./images/icons/mir_g@3x.png"></span>
+							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==1,'checkbutton-check':value ==0}"><input type="radio" name="founds" value="1" ng-model="value"></span>
+						</label>						
+					</li>
+				</ul>
+			</div>
+		</div>
+	</ion-content>
+	<div class="total-pay white-bg padding-left">
+		<span class="color-self">应付总额：</span>
+		<span class="assertive">￥{{shouldpay}}</span>
+		<span class="submit-button light balanced-bg padding-left padding-right fr" ng-click="goPaynow()">提交订单</span>
+	</div>
+</div>

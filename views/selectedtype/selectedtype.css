@@ -1,0 +1,14 @@
+.selectedtype .assortment{
+	padding:5px 20px;
+	border-bottom:1px solid #999999;
+}
+.selectedtype .assortment>li{
+	width:25%;
+}
+.selectedtype .assortment>li>span{
+	width:80%;
+	display:block;
+	margin:0 auto;
+	border-radius:8px;
+	text-align: center;
+}

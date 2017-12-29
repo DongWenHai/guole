@@ -1,0 +1,39 @@
+.mine .mine-edit{
+	position:absolute;
+	bottom:5px;
+	right:10px;
+}
+.mine .mine-header{
+	position:relative;
+}
+.mine .mine-data{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.mine .mine-card p{
+	line-height:24px;
+	color:#316901;
+}
+.mine .mine-products{
+	background:rgba(153,153,153,.5);
+}
+.mine .mine-products>div{
+
+	width:calc(50% - 1px);
+}
+.mine .mine-products>div>p{
+	text-align:center;
+}
+.mine .mine-bar{
+	border-right:2px solid #fff;
+	width:0px;
+	height:36px;
+	margin-top:2px;
+	display:block;
+}
+.mine .icon-words-self{
+	border-radius: 6px;
+	font-size:12px;
+}

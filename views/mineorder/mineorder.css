@@ -1,0 +1,98 @@
+.mineorder .order-nav{
+	line-height:32px;
+	display:inline-block;
+	box-sizing: border-box;
+}
+.mineorder .order-nav-active{
+	border-bottom:1px solid #54b600;
+}
+.mineorder .orderinfor{
+	font-size:16px !important;
+}
+.mineorder .order-button{
+	display:block;
+	width:80px;
+	height:28px;
+	line-height:28px;
+	border-radius: 6px;
+	border:1px solid #54b600;
+}
+.mineorder .delete-button{
+	position: absolute;
+	top:1px;
+	right:10px;
+	z-index: 9999;
+	font-size:32px;
+}
+.mineorder .orderstate{
+	height:100px;
+	width:86px;
+	overflow: hidden;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index: 999;
+}
+.mineorder .orderstate>span{
+	font-size:18px;
+	line-height: 70px;
+}
+.mineorder .orderstate>img{
+	width:40px;
+	position: relative;
+    top: -40px;
+    left: 28px;
+}
+.mineorder .unsee{
+	display:none;
+}
+.mineorder .item-thumbnail-left{
+	padding-top:16px;
+}
+.mineorder .tagging{
+	font-size:12px;
+	color:#999999;
+	line-height:26px;
+}
+.mineorder .waitsend-icon{
+	width:26px;
+}
+.mineorder .waitsend-title{
+	line-height:26px;
+}
+.mineorder .circletend{
+	display:block;
+	margin:0 auto;
+	width:16px;
+	height:16px;
+	border-radius: 50%;
+	border:1px solid #000;
+	background:#fff;
+}
+.mineorder .circletend-active{
+ 	background:#54b600;
+ 	border:1px solid #54b600;
+ }
+.mineorder .creattime{
+	font-size:12px;
+	display:block;
+}
+.mineorder .tend{
+	position:relative;
+}
+.mineorder .tend-line{
+	width:100%;
+	height:0;
+	display:block;
+	border-bottom:1px dashed #000;
+	position:absolute;
+	top:13px;
+	left:50%;
+	z-index: -1;
+}
+.mineorder .tend-line-active{
+	border-bottom:1px dashed #54b600;
+}
+.all-order,.waitpay,.waitcollect,.waitsend{
+	min-height:120px;
+}

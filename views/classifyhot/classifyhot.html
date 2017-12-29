@@ -1,0 +1,37 @@
+<div class="classsifyhot">
+	<div class="newproducts">
+		<div class="products-title">
+			<h5 class="clearfix"><span class="img-container fl"><img class="full-image" src="./images/icons/bai@3x.png"></span><span class="fl title-name">新首发</span></h5>
+		</div>
+		<div class="row row-wrap white-bg margin-top">
+			<div class="col col-33" ng-repeat="item in newproductsdata track by $index">
+				<img class="products-img" class="full-image" ng-src="{{item.imgsrc}}">
+				<p class="products-name">{{item.name}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="loveproducts">
+		<div class="products-title">
+			<h5 class="clearfix"><span class="img-container fl"><img class="full-image" src="./images/icons/like@3x.png"></span><span class="fl title-name">最爱精选</span></h5>
+		</div>
+		<div class="row row-wrap white-bg margin-top">
+			<div class="col col-33" ng-repeat="item in loveproductsdata track by $index">
+				<img class="products-img" class="full-image" ng-src="{{item.imgsrc}}">
+				<p class="products-name">{{item.name}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="giftproducts">
+		<div class="products-title">
+			<h5 class="clearfix"><span class="img-container fl"><img class="full-image" src="./images/icons/gifft@3x.png"></span><span class="fl title-name">礼品定制类</span></h5>
+		</div>
+		<div class="row row-wrap white-bg margin-top">
+			<div class="col col-50" ng-repeat="item in giftproductsdata track by $index">
+				<img class="products-img" class="full-image" ng-src="{{item.imgsrc}}">
+				<p class="products-name">{{item.name}}</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,101 @@
+<div class="home">
+	<ion-header-bar class="bar-balanced item-input-inset">
+		<div class="button button-clear">
+			<i class="icon ion-ios-location icon-light"></i>
+		</div>
+		<div class="item-input-wrapper light-bg">
+			<input ng-focus="goState('homesearch')" type="text" name="" placeholder="智能移动充" />
+			<div class="button button-clear">
+				<i class="icon ion-android-search placeholder-icon"></i>
+			</div>
+		</div>
+		<div class="button button-clear" ng-click="muneselect()">
+			<i class="icon ion-navicon-round"></i>
+		</div>		
+	</ion-header-bar>
+	<!-- 头部按钮 -->
+	<div class="header-mune" ng-if="muneSelected">
+		<span class="mune-u-t text-center"><i class="icon ion-arrow-up-b light"></i></span>
+		<div class="option-list white-bg">
+			<div class="text-center">消息</div>
+			<div class="text-center" ui-sref="mineset">设置</div>
+		</div>
+	</div>
+	<ion-content>
+		<ion-slide-box does-continue="{{banner.doesContinue}}" auto-play="banner.autoPlay" slide-interval="{{banner.slideInterval}}">
+		    <ion-slide ng-repeat="item in bannerimgsrc track by $index">
+		    	<img class="full-image" ng-src="{{item}}">
+		    </ion-slide>
+		</ion-slide-box>
+		<!-- 产品类型 -->
+		<div class="home-product-type">
+			<ul class="clearfix">
+				<li class="fl" ng-repeat="item in producttype track by $index" ng-click="goState(item.stateName)">
+					<span>
+						<img ng-src="{{item.imgsrc}}">
+					</span>
+					<p>{{item.name}}</p>
+				</li>
+			</ul>			
+		</div>
+		<!-- 热卖产品 -->
+		<div class="hotsale">
+			<div class="hotsale-title">
+				<div class="home-title clearfix">
+					<span class="fl home-title-img"><img src="./images/icons/pink_l@3x.png"></span>
+					<span class="balanced fl">热卖</span>
+					<span class="fl home-title-img"><img src="./images/icons/pink_r@3x.png"></span>
+				</div>
+			</div>
+			<div class="hotproducts white-bg">
+				<ul class="clearfix row row-wrap product-list">
+					<li class="fl col col-50" ng-repeat="item in hotproducts track by $index" ng-click="goState('product.productdetail')">
+						<span><img class="full-image" ng-src="{{item.imgsrc}}"></span>
+						<p class="product-name">{{item.name}}</p>
+						<p class="product-price assertive">￥{{item.price}}</p>
+					</li>
+				</ul>
+			</div>			
+		</div>
+		<!-- 户外必备 -->
+		<div class="necessary-outdoor">
+			<div class="necessary-title">
+				<div class="home-title clearfix maxtitle">
+					<span class="fl home-title-img"><img src="./images/icons/pink_l@3x.png"></span>
+					<span class="balanced fl">户外必备</span>
+					<span class="fl home-title-img"><img src="./images/icons/pink_r@3x.png"></span>
+				</div>
+			</div>
+			<div class="necessary-products white-bg">
+				<ul class="clearfix row row-wrap product-list">
+					<li class="fl col col-33 product-list" ng-repeat="item in necessaryProducts track by $index">
+						<span><img class="full-image" ng-src="{{item.imgsrc}}"></span>
+						<p class="product-name">{{item.name}}</p>
+						<p class="product-price assertive">￥{{item.price}}</p>
+					</li>
+				</ul>
+			</div>		
+		</div>
+		<!-- 时尚新品 -->
+		<div class="fashion">
+			<div class="necessary-title">
+				<div class="home-title clearfix maxtitle">
+					<span class="fl home-title-img"><img src="./images/icons/pink_l@3x.png"></span>
+					<span class="balanced fl">时尚新品</span>
+					<span class="fl home-title-img"><img src="./images/icons/pink_r@3x.png"></span>
+				</div>
+			</div>
+			<div class="fashion-products white-bg">
+				<ul class="clearfix row row-wrap product-list">
+					<li class="fl col col-33" ng-repeat="item in fashionProduct track by $index">
+						<span><img class="full-image" ng-src="{{item.imgsrc}}"></span>
+						<p class="product-name">{{item.name}}</p>
+						<p class="product-price assertive">￥{{item.price}}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-padding"></div>
+	</ion-content>
+	
+</div>

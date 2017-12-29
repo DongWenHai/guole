@@ -1,0 +1,115 @@
+.car .car-container{
+	padding-bottom:85px;
+}
+.car .total{
+	width:100%;
+	height:36px;
+	border-top:1px solid #999999;
+	position:fixed;
+	bottom:49px;
+	left:0;
+}
+.car .item-complex .item-content, .item-radio .item-content{
+	padding:16px 16px 16px 28px;
+}
+.car .total label{
+	height:100%;
+	display:inline-block;
+}
+.car .checkbutton{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin:10px 0px 10px 5px;
+}
+.car .checkbutton-check{
+	background-image: url('../../images/icons/tick_e.png');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-size:16px 16px;
+}
+.car .checkbutton-checked{
+	background-image: url('../../images/icons/tick3x.png');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-size:16px 16px;
+}
+.car .checkbutton>input{
+	opacity: 0;
+}
+.car .totalmoney{
+	line-height:36px;
+}
+.car .total-button{
+	height:100%;
+	width:82px;
+	line-height:36px;
+	display:inline-block;
+	background:#54b600;
+	color:#fff;
+}
+
+.car .numedit{
+	display:block;
+}
+.car .item-checkbox-self{
+	width:16px;
+	height:16px;
+	display:inline-block;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:5px;
+	margin:auto 0;
+}
+.car .item-checkbox-self>input{
+	opacity: 0;
+}
+.car .car-img{
+	display:inline-block;
+	max-width: 80px;
+}
+.car .car-infor{
+	padding-left:10px;
+	box-sizing: border-box;
+	display:block;
+	width:calc(100% - 80px);
+	height:80px;
+	position:relative;
+}
+.car .car-price{
+	width:calc(100% - 10px);
+	height:24px;
+	position:absolute;
+	bottom:0;
+}
+.car .car-price>span{
+	line-height:22px;
+}
+.car .numButton{
+	width:24px;
+	height:100%;
+	line-height:22px;
+	font-size:18px;
+	display:inline-block;
+}
+.car .editNum{
+	border:1px solid #999999;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.car .numInput{
+	height:22px !important;
+	border-left:1px solid #999999;
+	border-right:1px solid #999999;
+}
+.car .numInput>input{
+	width:100%;
+	height:100%;
+	border:none;
+	outline: none;
+	line-height:22px;
+	padding-top:0;
+	text-align: center;
+	overflow: hidden;
+}

@@ -1,0 +1,25 @@
+.classify .hotclassify-title{
+	line-height:44px;
+	text-align: center;
+}
+.classify .classify-list{
+	width:100%;
+}
+.classify .classify-list>li{
+	padding:10px 0;
+	text-align: center;
+	color:#9ba097;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.classify .classify-content{
+	height:calc(100% - 49px);
+}
+.classify .scroll-view.scroll-y{
+	overflow-y: hidden;
+}
+.back-bg{
+	color:#fff !important;
+	background:#15bb15;
+}

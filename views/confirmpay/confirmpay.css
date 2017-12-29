@@ -1,0 +1,104 @@
+.confirmpay .takein-address{
+	padding:10px 0 20px;
+}
+.confirmpay .takein-address li{
+	height:38px;
+	padding:5px 10px;
+	color:#666666;
+	border-bottom:1px dashed #666666;
+}
+.confirmpay .takein-address li>span{
+	line-height:28px;
+}
+.confirmpay li.takein-address-title{
+	color:#000;
+}
+.confirmpay .icon-right-self{
+	font-size:28px;
+}
+.confirmpay .order-list{
+	position:relative;
+}
+.confirmpay .order-image{
+	width:80px;
+	display:inline-block;
+}
+.confirmpay .order-infor{
+	width:calc(100% - 80px);
+}
+.confirmpay .order-numb{
+	position:absolute;
+	bottom:10px;
+	right:20px;
+}
+.confirmpay .color-self{
+	color:#999999;
+}
+.confirmpay .order-container{
+	border-bottom:1px dashed #999999;
+}
+.confirmpay .pay-information li{
+	padding:0 10px;
+	height:38px;
+	border-bottom:1px dashed #666666;
+}
+.confirmpay .pay-information li>span{
+	display:inline-block;
+	height:38px;
+	line-height:38px;
+}
+.confirmpay .sendfoundslogo{
+	display:inline-block;
+	width:45px;
+	padding:3px 10px 3px 3px;
+}
+.confirmpay .payfounds li{
+	padding:3px 10px;
+	height:38px;
+	border-bottom:1px dashed #666666;
+}
+.confirmpay .payfounds li>label{
+	display:block;
+	height:100%;
+}
+.confirmpay .paylogo{
+	width:32px;
+}
+.confirmpay .founds-radio{
+	display:inline-block;
+	width:18px;
+	height:18px;
+	margin:11px;
+}
+
+.confirmpay .founds-radio>input{
+	opacity:0;
+}
+.confirmpay .checkbutton-check{
+	background-image: url('../../images/icons/tick_e.png');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-size:18px 18px;
+}
+.confirmpay .checkbutton-checked{
+	background-image: url('../../images/icons/tick3x.png');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-size:18px 18px;
+}
+.confirmpay .order-confirm{
+	padding-bottom:45px;
+}
+.confirmpay .total-pay{
+	width:100%;
+	height:44px;
+	border-top:1px solid #999999;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+.confirmpay .total-pay>span{
+	display:inline-block;
+	height:100%;
+	line-height: 44px;
+}

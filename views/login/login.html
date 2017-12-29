@@ -1,0 +1,45 @@
+<div class="login">
+	<ion-header-bar class="bar-balanced" align-title="center">
+		<div class="button button-clear" ng-click="goState('mineset')">
+			<i class="icon ion-ios-arrow-left icon-light"></i>
+		</div>
+		<h1 class="title">登录</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="header-photo">
+			<img class="full-image" src="./images/LOGO@3x.png">		
+		</div>
+
+		<div class="form clearfix">
+			<div class="username clearfix">
+				<span class="fl user-icon"><img src="./images/icons/account3x.png"></span>
+				<span class="fl user-input"><input type="text"></span>
+			</div>
+
+			<div class="username clearfix">
+				<span class="fl user-icon"><img src="./images/icons/pass_w3x.png"></span>
+				<span class="fl user-input"><input type="password"></span>
+			</div>
+
+			<div class="forget-password clearfix">
+				<span class="fr color-green">忘记密码?</span>
+			</div>
+
+			<div class="login-button button-login color-green align-center">登录</div>
+			<div class="login-button button-register align-center balanced-bg light" ng-click="goState('register')">立即注册</div>
+		</div>
+
+		<div class="third-party-login">
+			<h5 class="clearfix">
+				<i class="logon-line logon-line-left"></i>
+				<span class="color-green align-center">通过第三方登录</span>
+				<i class="logon-line logon-line-right"></i>
+			</h5>
+			<div class="row">
+				<div class="col col-33"><img class="third-logo" src="./images/icons/QQ_go@3x.png"></div>
+				<div class="col col-33"><img class="third-logo" src="./images/icons/bo_go@3x.png"></div>
+				<div class="col col-33"><img class="third-logo" src="./images/icons/mir@3x.png"></div>
+			</div>
+		</div>
+	</ion-content>
+</div>

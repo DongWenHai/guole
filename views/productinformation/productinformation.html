@@ -1,0 +1,56 @@
+<div class="productinformation">
+	<div class="row padding-none white-bg">
+		<div class="col col-50 padding-none text-center" ng-click="toggolIndex(0)">
+			<span ng-class="{'active-border':indexIsZone}" class="productinformation-title">详细信息</span>
+		</div>
+		<div class="col col-50 padding-none text-center" ng-click="toggolIndex(1)">
+			<span ng-class="{'active-border':!indexIsZone}" class="productinformation-title">订购说明</span>
+		</div>
+	</div>
+	<ion-slide-box show-pager="false" active-slide="index" on-slide-changed="onSlideChanged($index)">
+		<ion-slide>
+			<div class="detailinfor-box white-bg">
+				<table>
+					<tr>
+						<td>输入参数 240（V）</td>
+						<td>输出参数 5（V）</td>
+					</tr>
+					<tr>
+						<td>充电电流 2400（ma）</td>
+						<td>指示功能 有指示功能</td>
+					</tr>
+					<tr>
+						<td>类型 无线冲</td>
+						<td>型号 MT-08WMT-08W</td>
+					</tr>
+					<tr>
+						<td>颜色 黑色</td>
+						<td>产品认证 CE FCC RHOS</td>
+					</tr>
+				</table>
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="explain white-bg padding">
+				<div class="clearfix">
+					<span class="paylogo fl"><img src="./images/paylogo.png" alt=""></span>
+					<span class="explain-content fl">
+						<p>买家先选择支付方式（如网上银行、快捷支付支付宝余额等）付款到支付宝，支付宝担保货款安全；当买家收到货品并</p>
+						<p>确认后，再由支付宝打款给供应商。如逾期未收到商品或商品不符合要求，买家可以提出退款申请以保障自身权益。</p>
+					</span>
+				</div>
+				<div class="process padding">
+					<span class="balanced-bg">1、选择商品</span>
+					<i class="icon ion-arrow-right-c"></i>
+					<span class="balanced-bg">2、确认订单信息</span>
+					<i class="icon ion-arrow-right-c"></i>
+					<span class="balanced-bg">3、选择付款方式</span>
+					<i class="icon ion-arrow-right-c"></i>
+					<span class="balanced-bg">4、收到货并满意</span>
+					<i class="icon ion-arrow-right-c"></i>
+					<span class="balanced-bg">5、确认收货</span>
+				</div>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+</div>

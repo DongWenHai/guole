@@ -1,0 +1,26 @@
+
+.payfail .pay-logo>img{
+	width:180px;
+	margin:0 auto;
+	padding-top:20px;
+}
+.payfail .color-green-self{
+	color:#2c6400;
+}
+.payfail .payinfor{
+	min-height:216px;
+	overflow: hidden;
+	position:relative;
+	padding-top:20px;
+}
+.payfail .payinfor-bg{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: -1;
+}
+.payfail .prizeDraw{
+	width:50%;
+	margin:0 auto;
+	border-radius:16px;
+}

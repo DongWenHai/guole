@@ -1,0 +1,26 @@
+.minecoupons .coupons-nav{
+	display: inline-block;
+	line-height:32px;	
+	box-sizing: border-box;
+}
+.minecoupons .coupons-nav-avtive{
+	border-bottom:1px solid #54b600;
+}
+.minecoupons .coupons-list{
+	position:relative;
+}
+.minecoupons .button-self{
+	display:block;
+	width:88px;
+	height:28px;
+	border:1px solid #54b600;
+	border-radius:14px;
+	line-height:28px;
+	position:absolute;
+	bottom:20px;
+	right:40px;
+}
+.minecoupons .button-disabled{
+	border:1px solid #999999;
+	color:#999999;
+}

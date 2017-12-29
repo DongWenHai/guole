@@ -1,0 +1,11 @@
+
+.phoneclassify .phoneclassify-list,
+.phoneclassify .phoneclassify-container{
+	padding:10px;
+}
+.phoneclassify .phoneclassify-list p{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+	font-size: 12px;
+}

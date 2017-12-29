@@ -1,0 +1,92 @@
+.home .header-mune{
+	width: 44px;
+	padding-top:12px;
+    position: fixed;
+    top: 30px;
+    right: 5px;
+    z-index: 999;
+}
+.mune-u-t{
+	display:block;
+	position:absolute;
+	top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.mune-u-t>i{
+	font-size:20px;
+}
+.option-list{
+	padding:5px;
+}
+.home .ion-record:before{
+	color: #ddd !important;
+}
+.home .home-product-type{
+	width:100%;
+	padding:10px 0;
+}
+.home .home-product-type li{
+	width:33.3333%
+}
+.home .home-product-type li span{
+	width:100%;
+	display:block;
+	padding:10px 0;
+}
+.home .home-product-type li img{
+	width:40%;
+	margin:0 auto;
+}
+.home-product-type p{
+	text-align: center;
+	font-family: "黑体";
+}
+.home .home-title{
+	width:180px;
+	margin:0 auto;
+	padding:10px 0
+}
+.home .home-title-img{
+	display:block;
+	width:76px;
+	height:20px;
+	position:relative;
+}
+.home .home-title-img>img{
+	position:absolute;
+	top:0;
+	bottom:0;
+	margin:auto 0;
+}
+.home .hotsale-title{
+	width:100%;
+}
+.home .hotproducts{
+	width:100%;
+}
+.home .product-list{
+	padding:10px;
+	box-sizing: border-box;
+}
+.home .product-name{
+	font-family: "黑体";
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.home .product-price{
+	font-family: "黑体";
+	font-size:18px;
+}
+.home .necessary-outdoor{
+	width:100%;
+}
+.home .necessary-title{
+	padding-top:20px;
+	box-sizing: border-box;
+}
+.home .maxtitle{
+	width:208px;
+}

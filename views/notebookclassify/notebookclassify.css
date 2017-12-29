@@ -1,0 +1,9 @@
+.notebookclassify .notebookclassify-container{
+	padding:10px;
+}
+.notebookclassify .notebookclassify-list p{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+	font-size: 12px;
+}
