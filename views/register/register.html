@@ -9,44 +9,44 @@
 
 		<div class="form">
 			<div class="input-box clearfix">
-				<span class="input-icon fl"><img src="./images/icons/mo@3x.png"></span>
-				<span class="input fl"><input type="text" placeholder="+86请输入手机号"></span>
+				<span class="input-icon fl"><img src="./images/icons/mo@3x.png" /></span>
+				<span class="input fl"><input type="text" placeholder="+86请输入手机号" ng-model="registerData.phone" /></span>
 			</div>
 
 			<div class="input-box clearfix">
-				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png"></span>
-				<span class="input fl"><input type="password" placeholder="设置登陆密码，不少于6位"></span>
+				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png" /></span>
+				<span class="input fl"><input type="password" placeholder="设置登陆密码，不少于6位" ng-model="registerData.password" /></span>
 			</div>
 
 			<div class="input-box clearfix">
-				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png"></span>
-				<span class="input fl"><input type="password" placeholder="再次确认密码"></span>
+				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png" /></span>
+				<span class="input fl"><input type="password" placeholder="再次确认密码" ng-model="registerData.repassword" /></span>
 			</div>
 
 			<div class="clearfix identify">
 				<div class="input-box clearfix input-box-min">
-					<span class="input-icon fl"><img src="./images/icons/picture_zc3x.png"></span>
-					<span class="input fl"><input type="text" placeholder="输入图片验证码"></span>
+					<span class="input-icon fl"><img src="./images/icons/picture_zc3x.png" /></span>
+					<span class="input fl"><input type="text" placeholder="输入图片验证码" ng-model="registerData.imgCode" /></span>
 				</div>
-				<span class="identifying-code"><img src="./images/7v@3x.png"></span>
+				<span class="identifying-code"><img src="./images/7v@3x.png" /></span>
 			</div>
 
 			<div class="clearfix identify">
 				<div class="input-box clearfix input-box-min fl">
-					<span class="input-icon fl"><img src="./images/icons/val_zc@3x.png"></span>
-					<span class="input fl"><input type="text" placeholder="输入手机验证码"></span>
+					<span class="input-icon fl"><img src="./images/icons/val_zc@3x.png" /></span>
+					<span class="input fl"><input type="text" placeholder="输入手机验证码" ng-model="registerData.phoneCode" /></span>
 				</div>
-				<span class="send-phone-code balanced-bg light fl align-center">
+				<span class="send-phone-code balanced-bg light fl align-center" ng-click="getcode()">
 					发送验证码
 				</span>
 			</div>
 
 			<div class="accept-agreement clearfix">
-				<input class="fl" type="checkbox" name="">
+				<input class="fl" type="checkbox">
 				<span class="fl">同意<span class="balanced">《果乐产品》</span>服务协议</span>
 			</div>
 
-			<div class="register-button light align-center">立即注册</div>
+			<div class="register-button light align-center" ng-click="submitdata()">立即注册</div>
 			
 		</div>
 
@@ -57,9 +57,9 @@
 				<i class="logon-line logon-line-right"></i>
 			</h5>
 			<div class="row">
-				<div class="col col-33"><img class="third-logo" src="./images/icons/QQ_go@3x.png"></div>
-				<div class="col col-33"><img class="third-logo" src="./images/icons/bo_go@3x.png"></div>
-				<div class="col col-33"><img class="third-logo" src="./images/icons/mir@3x.png"></div>
+				<div class="col col-33"><img class="third-logo" src="./images/icons/QQ_go@3x.png" /></div>
+				<div class="col col-33"><img class="third-logo" src="./images/icons/bo_go@3x.png" /></div>
+				<div class="col col-33"><img class="third-logo" src="./images/icons/mir@3x.png" /></div>
 			</div>
 		</div>
 	</ion-content>
