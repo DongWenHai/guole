@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('indexController',['$rootScope',function($rootScope){
+	.controller('indexController',['$rootScope','$state',function($rootScope,$state){
 		$rootScope.goState =function(stateName){
 			$state.go(stateName);
 		};

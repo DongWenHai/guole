@@ -96,9 +96,28 @@
 	display:inline-block;
 	width:78px;
 	height:32px;
-	line-height:32px;
 	margin-left:5px;
 	border-radius: 6px;
+	overflow:hidden;
+	position:relative;
+}
+.register .phone-code-button{
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:32px;
+}
+.register .phone-code-loading{
+	opacity: .5;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:4px 0;
+	z-index:999;
+}
+.register .phone-code-loading .spinner svg{
+	width:16px;
+	height:16PX;
 }
 .register .identify{
 	margin-top:15px;

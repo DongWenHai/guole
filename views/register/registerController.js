@@ -1,14 +1,53 @@
 angular.module('app')
-	.controller('registerController',['$scope','$state','API','isValid','BombBox','formatTime',function($scope,$state,API,isValid,BombBox,formatTime){
+	.controller('registerController',['$scope','$state','API','isValid','BombBox','formatTime','$interval',function($scope,$state,API,isValid,BombBox,formatTime,$interval){
+		
+		$scope.codebutton = {
+			loading: false,
+			text: '发送验证码',
+			retext: '再次发送',
+			time: 60
+		};
+
+		function isPhone(){
+			if(!isValid.isNotEmputy($scope.registerData.phone)){
+				BombBox.warBox('手机号码不能为空')
+				return false;
+			}else if(!isValid.isLength($scope.registerData.phone,11,14,true)){
+				BombBox.warBox('手机号码长度不正确')
+				return false;
+			}else if(!isValid.isRegexp($scope.registerData.phone,$scope.reg.phone)){
+				BombBox.warBox('手机号码格式不正确')
+				return false;
+			}
+			return true;
+		}
+
+		function codeButtonLoading(){
+			$scope.codebutton.loading = true;
+			$scope.codebutton.text = $scope.codebutton.retext;
+			var timer = $interval(function(){
+				$scope.codebutton.time = $scope.codebutton.time - 1;
+				if($scope.codebutton.time <= 0){
+					$interval.cancel(timer);
+					$scope.codebutton.loading = false;
+				}
+			},1000);
+		};
+
 		$scope.getcode = function(){
+			if(!isPhone()){return}
+			codeButtonLoading();
 			API.fetchGet('http://127.0.0.1:9000/getcode',{phone:$scope.registerData.phone})
-				.success(function(data){
-					$scope.codedata = data;
-					console.log(data)
+				.then(function(data){
+					$scope.codedata = data.data;
+					if(data.data.statusCode == 1){
+						BombBox.warBox(data.data.msg)
+					}
+					console.log($scope.codedata)
 				})
-				.error(function(data){
-					console.log(data);
-				});
+				.catch(function(err){
+					console.log(err);
+				})
 		};
 		
 		$scope.registerData = {
@@ -69,16 +108,19 @@ angular.module('app')
 			if(!isValidconfirm()){return}
 			BombBox.loadingShow();
 			$scope.registerData.registerTime = formatTime.format(new Date(), 'yyyy-MM-dd hh:mm:ss');
-			console.log($scope.registerData);
-			API.fetchGet('http://127.0.0.1:9000/register',$scope.registerData)
-				.success(function(data){
+			API.fetchPost('http://127.0.0.1:9000/register',$scope.registerData)
+				.then(function(data){
 					BombBox.loadingHide();
-					BombBox.warBox(data.msg);
-					// $state.go('login');
+					if(data.data.statusCode == 201 || data.data.statusCode == 202){
+						BombBox.warBox(data.data.msg);
+					}else{
+						BombBox.warBox(data.data.msg);
+						$state.go('login');
+					}
 				})
-				.error(function(data){
+				.catch(function(data){
 					BombBox.loadingHide();
-					BombBox.warBox(data.msg);
+					BombBox.warBox(data.data);
 					console.log(data);
 				});
 		};

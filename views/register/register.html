@@ -36,9 +36,16 @@
 					<span class="input-icon fl"><img src="./images/icons/val_zc@3x.png" /></span>
 					<span class="input fl"><input type="text" placeholder="输入手机验证码" ng-model="registerData.phoneCode" /></span>
 				</div>
-				<span class="send-phone-code balanced-bg light fl align-center" ng-click="getcode()">
-					发送验证码
+				<span class="send-phone-code fl">
+					<span class="phone-code-button balanced-bg light fl align-center" ng-click="getcode()">
+					{{codebutton.text}}
+					</span>
+					<span class="phone-code-button phone-code-loading light-bg align-center" ng-if="codebutton.loading">
+						{{codebutton.time}}s				
+						<ion-spinner icon="spiral"></ion-spinner>
+					</span>
 				</span>
+				
 			</div>
 
 			<div class="accept-agreement clearfix">

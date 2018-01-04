@@ -4,9 +4,17 @@ angular.module('app')
 
 			fetchGet: function(url, params){
 				return $http({
-					methed: 'GET',
+					method: 'GET',
 					url: url,
 					params: params
+				})
+			},
+
+			fetchPost: function(url, data){
+				return $http({
+					method: 'POST',
+					url: url,
+					data: data
 				})
 			}
 
