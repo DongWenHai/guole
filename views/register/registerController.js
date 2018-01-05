@@ -1,13 +1,13 @@
 angular.module('app')
 	.controller('registerController',['$scope','$state','API','isValid','BombBox','formatTime','$interval',function($scope,$state,API,isValid,BombBox,formatTime,$interval){
-		
+		//control the button of sending verification code
 		$scope.codebutton = {
 			loading: false,
 			text: '发送验证码',
 			retext: '再次发送',
 			time: 60
 		};
-
+		//check phone
 		function isPhone(){
 			if(!isValid.isNotEmputy($scope.registerData.phone)){
 				BombBox.warBox('手机号码不能为空')
@@ -21,19 +21,22 @@ angular.module('app')
 			}
 			return true;
 		}
-
+		//send verification code loading
 		function codeButtonLoading(){
-			$scope.codebutton.loading = true;
-			$scope.codebutton.text = $scope.codebutton.retext;
-			var timer = $interval(function(){
+			$scope.codebutton.time = 60;
+			$scope.codebutton.loading = true;			
+			var timer = $interval(function(){		
 				$scope.codebutton.time = $scope.codebutton.time - 1;
+				$scope.codebutton.text = $scope.codebutton.time + 's' + $scope.codebutton.retext;
 				if($scope.codebutton.time <= 0){
 					$interval.cancel(timer);
 					$scope.codebutton.loading = false;
+					$scope.codebutton.time = '';
+					$scope.codebutton.text = $scope.codebutton.retext;
 				}
 			},1000);
 		};
-
+		//get verification code
 		$scope.getcode = function(){
 			if(!isPhone()){return}
 			codeButtonLoading();
@@ -49,7 +52,7 @@ angular.module('app')
 					console.log(err);
 				})
 		};
-		
+		//register information
 		$scope.registerData = {
 			phone:'',
 			password:'',
@@ -65,7 +68,7 @@ angular.module('app')
 			phone: /^(\+86){0,1}1[35678]\d{9}$/,
 			password: /[0-9A-z]{6,16}/
 		}
-
+		//check register information
 		function isValidconfirm(){
 			if(!isValid.isNotEmputy($scope.registerData.phone)){
 				BombBox.warBox('手机号码不能为空')
@@ -103,7 +106,7 @@ angular.module('app')
 			}
 			return true;
 		};
-
+		//submit registr information
 		$scope.submitdata = function(){
 			if(!isValidconfirm()){return}
 			BombBox.loadingShow();
@@ -124,5 +127,7 @@ angular.module('app')
 					console.log(data);
 				});
 		};
+		//accept agreement
+		$scope.acceptAgreement = false;
 
 	}])

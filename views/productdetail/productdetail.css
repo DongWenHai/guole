@@ -1,5 +1,5 @@
 .productdetail{
-
+	padding-bottom:48px;
 }
 .productdetail .color-gray{
 	color:#666666;
@@ -54,7 +54,4 @@
 	width:100%;
 	height:100%;
 	border:none;
-}
-.productdetail .takeingoods{
-	margin-bottom:48px;
 }

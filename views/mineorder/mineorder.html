@@ -16,7 +16,7 @@
 				<div class="all-order">
 					<div class="list" ng-repeat="item in allorderdata track by $index">
 						<div class="item item-thumbnail-left">
-							<img ng-src="{{item.imgsrc}}">
+							<img ng-src="{{item.imgsrc}}" />
 							<h2>{{item.productName}}</h2>
 							<p>商品编码：{{item.identifier}}</p>
 							<p class="orderinfor"><span class="text-dark">共{{item.numb}}件商品</span><span class="padding-left text-dark">￥{{item.price}}</span></p>
@@ -30,7 +30,7 @@
 						<div class="orderstate">
 							<p ng-class="{'unsee':item.orderstate}">已取消</p>
 							<span ng-class="{'unsee':!item.orderstate}" class="balanced">已完成</span>
-							<img ng-class="{'unsee':!item.orderstate}" src="./images/icons/pass_my@3x.png">
+							<img ng-class="{'unsee':!item.orderstate}" src="./images/icons/pass_my@3x.png" />
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 							<span class="fr balanced">等待付款</span>
 						</div>
 						<div class="item item-thumbnail-left">
-							<img ng-src="{{item.imgsrc}}">
+							<img ng-src="{{item.imgsrc}}" />
 							<h2>{{item.productName}}</h2>
 							<p>商品编码：{{item.identifier}}</p>
 							<p class="orderinfor"><span class="text-dark">共{{item.numb}}件商品</span><span class="padding-left text-dark">￥{{item.price}}</span></p>
@@ -64,7 +64,7 @@
 							<span class="fr balanced">等待收货</span>
 						</div>
 						<div class="item item-thumbnail-left">
-							<img ng-src="{{item.imgsrc}}">
+							<img ng-src="{{item.imgsrc}}" />
 							<h2>{{item.productName}}</h2>
 							<p>商品编码：{{item.identifier}}</p>
 							<p class="orderinfor"><span class="text-dark">共{{item.numb}}件商品</span><span class="padding-left text-dark">￥{{item.price}}</span></p>
@@ -81,12 +81,12 @@
 				<div class="waitsend">
 					<div class="list" ng-repeat="item in waitsenddata track by $index">
 						<div class="item clearfix">
-							<img class="fl waitsend-icon" src="./images/icons/time@2x.png">
+							<img class="fl waitsend-icon" src="./images/icons/time@2x.png" />
 							<span class="fl waitsend-title padding-left">等待商家发货</span>
 							<span class="fr tagging">买家已付款，等待卖家发货</span>
 						</div>
 						<div class="item item-thumbnail-left">
-							<img ng-src="{{item.imgsrc}}">
+							<img ng-src="{{item.imgsrc}}" />
 							<h2>{{item.productName}}</h2>
 							<p>商品编码：{{item.identifier}}</p>
 							<p class="orderinfor"><span class="text-dark">共{{item.numb}}件商品</span><span class="padding-left text-dark">￥{{item.price}}</span></p>

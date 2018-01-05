@@ -19,13 +19,13 @@
 		<ion-slide-box show-pager="false" active-slide="index" on-slide-changed="onSlideChanged($index)">
 			<ion-slide>
 				<div class="coupons-list padding" ng-repeat="item in couponsdata track by $index">
-					<img class="full-image" ng-src="{{item.imgsrc}}">
+					<img class="full-image" ng-src="{{item.imgsrc}}" />
 					<span class="button-self balanced align-center">立即使用</span>
 				</div>
 			</ion-slide>
 			<ion-slide>
 				<div class="coupons-list padding" ng-repeat="item in couponsouttimedata track by $index">
-					<img class="full-image" ng-src="{{item.imgsrc}}">
+					<img class="full-image" ng-src="{{item.imgsrc}}" />
 					<span class="button-self button-disabled balanced align-center">立即使用</span>
 				</div>				
 			</ion-slide>

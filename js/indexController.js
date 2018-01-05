@@ -3,4 +3,15 @@ angular.module('app')
 		$rootScope.goState =function(stateName){
 			$state.go(stateName);
 		};
+
+		$rootScope.goBack = function(){
+			history.go(-1);
+		}
+
+		$rootScope.userinfor = {
+			phone: '',
+			isLogin: false,
+			nickname: '',
+			uid: ''
+		}
 	}])

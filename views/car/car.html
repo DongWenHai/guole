@@ -7,10 +7,10 @@
 			<ion-list>
 				<ion-item class="item-self clearfix" ng-repeat="item in cardata track by $index">
 					<span class="item-checkbox-self" ng-class="{'checkbutton-checked':item.checkitem,'checkbutton-check':!item.checkitem}">
-						<input type="checkbox" ng-model="item.checkitem" ng-change="changeCheckbox()">
+						<input type="checkbox" ng-model="item.checkitem" ng-change="changeCheckbox()" />
 					</span>
 					<span class="car-img fl">
-						<img class="full-image" ng-src="{{item.imgsrc}}">
+						<img class="full-image" ng-src="{{item.imgsrc}}" />
 					</span>
 					<span class="car-infor fl">
 						<h3>{{item.productName}}</h3>
@@ -19,7 +19,7 @@
 							<span class="assertive fl">￥{{item.price}}</span>
 							<span class="fr clearfix editNum">
 								<span class="align-center numButton fr" ng-click="increaseNum($index)">+</span>
-								<span class="align-center numButton numInput fr"><input type="text" ng-model="item.numb" ng-change="countTotalMoney()"></span>
+								<span class="align-center numButton numInput fr"><input type="text" ng-model="item.numb" ng-change="countTotalMoney()" /></span>
 								<span class="align-center numButton fr" ng-click="decreaseNum($index)">-</span>
 							</span>
 						</div>
@@ -35,7 +35,7 @@
 	<div class="total white-bg">
 		<label>
 			<span class="checkbutton" ng-class="{'checkbutton-checked':allCheck,'checkbutton-check':!allCheck}">
-				<input type="checkbox" ng-model="allCheck" ng-change="allSelect()"/>
+				<input type="checkbox" ng-model="allCheck" ng-change="allSelect()" />
 			</span>
 			<span>全选</span>
 		</label>

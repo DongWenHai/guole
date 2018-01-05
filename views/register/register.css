@@ -115,6 +115,10 @@
 	padding:4px 0;
 	z-index:999;
 }
+.resend-time{
+	display:inline-block;
+	line-height:24px;
+}
 .register .phone-code-loading .spinner svg{
 	width:16px;
 	height:16PX;
@@ -129,11 +133,27 @@
 .register .accept-agreement>input{
 	margin:3px;
 }
-.register .register-button{
+.button-box{
 	width:60%;
 	height:36px;
 	margin:0 auto 30px;
+	position:relative;
+}
+.register .register-button{
+	width:100%;
+	height:100%;
 	line-height:36px;
 	border-radius:18px;
 	background:#489505;
+}
+.button-disabled{
+	width:100%;
+	height:100%;
+	background:#fff;
+	border-radius:18px;
+	opacity:.5;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:99;
 }

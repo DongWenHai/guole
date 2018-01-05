@@ -27,7 +27,7 @@
 			<div class="order-container">			
 				<div class="order-list white-bg padding clearfix" ng-repeat="item in confirmdata track by $index">
 					<span class="order-image fl">
-						<img class="full-image" ng-src="{{item.imgsrc}}">
+						<img class="full-image" ng-src="{{item.imgsrc}}" />
 					</span>
 					<span class="order-infor fr padding-left">
 						<h5>{{item.productName}}</h5>
@@ -44,7 +44,7 @@
 				<li>
 					<span class="color-self">配送方式</span>
 					<span class="fr">
-						<span class="sendfoundslogo"><img src="./images/icons/SF-icon@3x.png"></span>
+						<span class="sendfoundslogo"><img src="./images/icons/SF-icon@3x.png" /></span>
 						<span class="fr"><i class="icon-right-self icon ion-ios-arrow-right"></i></span>
 					</span>
 				</li>
@@ -62,14 +62,14 @@
 				<ul>
 					<li class="clearfix">
 						<label>
-							<span class="fl paylogo"><img src="./images/icons/pay@3x.png"></span>
-							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==0,'checkbutton-check':value ==1}"><input type="radio" name="founds" value="0" ng-model="value"></span>
+							<span class="fl paylogo"><img src="./images/icons/pay@3x.png" /></span>
+							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==0,'checkbutton-check':value ==1}"><input type="radio" name="founds" value="0" ng-model="value" /></span>
 						</label>						
 					</li>
 					<li class="clearfix">
 						<label>
-							<span class="fl paylogo"><img src="./images/icons/mir_g@3x.png"></span>
-							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==1,'checkbutton-check':value ==0}"><input type="radio" name="founds" value="1" ng-model="value"></span>
+							<span class="fl paylogo"><img src="./images/icons/mir_g@3x.png" /></span>
+							<span class="fr founds-radio" ng-class="{'checkbutton-checked':value ==1,'checkbutton-check':value ==0}"><input type="radio" name="founds" value="1" ng-model="value" /></span>
 						</label>						
 					</li>
 				</ul>

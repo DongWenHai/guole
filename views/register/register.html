@@ -10,17 +10,17 @@
 		<div class="form">
 			<div class="input-box clearfix">
 				<span class="input-icon fl"><img src="./images/icons/mo@3x.png" /></span>
-				<span class="input fl"><input type="text" placeholder="+86请输入手机号" ng-model="registerData.phone" /></span>
+				<span class="input fl"><input type="text" maxlength="14" placeholder="+86请输入手机号" ng-model="registerData.phone" /></span>
 			</div>
 
 			<div class="input-box clearfix">
 				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png" /></span>
-				<span class="input fl"><input type="password" placeholder="设置登陆密码，不少于6位" ng-model="registerData.password" /></span>
+				<span class="input fl"><input type="password" maxlength="16" placeholder="设置登陆密码，不少于6位" ng-model="registerData.password" /></span>
 			</div>
 
 			<div class="input-box clearfix">
 				<span class="input-icon fl"><img src="./images/icons/pa_zc@3x.png" /></span>
-				<span class="input fl"><input type="password" placeholder="再次确认密码" ng-model="registerData.repassword" /></span>
+				<span class="input fl"><input type="password" maxlength="16" placeholder="再次确认密码" ng-model="registerData.repassword" /></span>
 			</div>
 
 			<div class="clearfix identify">
@@ -34,14 +34,13 @@
 			<div class="clearfix identify">
 				<div class="input-box clearfix input-box-min fl">
 					<span class="input-icon fl"><img src="./images/icons/val_zc@3x.png" /></span>
-					<span class="input fl"><input type="text" placeholder="输入手机验证码" ng-model="registerData.phoneCode" /></span>
+					<span class="input fl"><input type="text" maxlength="6" placeholder="输入手机验证码" ng-model="registerData.phoneCode" /></span>
 				</div>
 				<span class="send-phone-code fl">
 					<span class="phone-code-button balanced-bg light fl align-center" ng-click="getcode()">
 					{{codebutton.text}}
 					</span>
-					<span class="phone-code-button phone-code-loading light-bg align-center" ng-if="codebutton.loading">
-						{{codebutton.time}}s				
+					<span class="phone-code-button phone-code-loading light-bg align-center" ng-if="codebutton.loading">			
 						<ion-spinner icon="spiral"></ion-spinner>
 					</span>
 				</span>
@@ -49,11 +48,15 @@
 			</div>
 
 			<div class="accept-agreement clearfix">
-				<input class="fl" type="checkbox">
+				<input class="fl" type="checkbox" ng-model="acceptAgreement" />
 				<span class="fl">同意<span class="balanced">《果乐产品》</span>服务协议</span>
 			</div>
-
-			<div class="register-button light align-center" ng-click="submitdata()">立即注册</div>
+	
+			<div class="button-box">
+				<div class="register-button light align-center" ng-click="submitdata()">立即注册</div>
+				<div class="button-disabled" ng-if="!acceptAgreement"></div>
+			</div>
+			
 			
 		</div>
 

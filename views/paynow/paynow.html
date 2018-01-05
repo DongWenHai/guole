@@ -9,7 +9,7 @@
 	<ion-content>
 		<div class="pay-detail clearfix white-bg">
 			<div class="fl qrcode padding-right">
-				<img class="full-image" src="./images/scan@3x.png" alt="">
+				<img class="full-image" src="./images/scan@3x.png" alt="" />
 			</div>
 			<div class="fl product-name">
 				<p ng-repeat="item in order track by $index">{{item.productName}}</p>
@@ -31,14 +31,14 @@
 		<div class="pay-psd padding white-bg">
 			<h5>支付宝密码：</h5>
 			<div class="psd-box">
-				<input type="text" maxlength="6" autofocus ng-model="psdvalue" ng-change="changepsd(psdvalue)"/>
+				<input type="text" maxlength="6" autofocus="autofocus" ng-model="psdvalue" ng-change="changepsd(psdvalue)" />
 				<ul class="clearfix">
-					<li class="fl"><span ng-class="{'unable':psdLength >= 1}"><i class="icon ion-record"></span></i></li>
-					<li class="fl"><span ng-class="{'unable':psdLength >= 2}"><i class="icon ion-record"></span></i></li>
-					<li class="fl"><span ng-class="{'unable':psdLength >= 3}"><i class="icon ion-record"></span></i></li>
-					<li class="fl"><span ng-class="{'unable':psdLength >= 4}"><i class="icon ion-record"></span></i></li>
-					<li class="fl"><span ng-class="{'unable':psdLength >= 5}"><i class="icon ion-record"></span></i></li>
-					<li class="fl last-border-none"><span ng-class="{'unable':psdLength >= 6}"><i class="icon ion-record"></span></i></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 1}"><i class="icon ion-record"></i></span></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 2}"><i class="icon ion-record"></i></span></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 3}"><i class="icon ion-record"></i></span></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 4}"><i class="icon ion-record"></i></span></li>
+					<li class="fl"><span ng-class="{'unable':psdLength >= 5}"><i class="icon ion-record"></i></span></li>
+					<li class="fl last-border-none"><span ng-class="{'unable':psdLength >= 6}"><i class="icon ion-record"></i></span></li>
 				</ul>
 			</div>
 			<span class="balanced">忘记密码?</span>
