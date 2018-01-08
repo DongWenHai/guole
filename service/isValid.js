@@ -21,12 +21,17 @@ angular.module('app')
 			//验证正则,匹配返回true
 			isRegexp: function(val,reg){
 				return reg.test(val);
-			console.log(typeof reg);
 			},
 
 			//验证是否相等
 			isEqual: function(val1,val2){
 				return val1 == val2 ? true : false;
+			},
+
+			//判断是否是邮箱，是邮箱返回true
+			isEmail: function(val){
+				var emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+				return emailReg.test(val);
 			}
 		}
 

@@ -259,6 +259,17 @@ angular.module('app')
 					}]
 				}
 			})
+			//忘记密码
+			.state('modifypwd', {
+				url: '/modifypwd',
+				templateUrl: './views/modifypwd/modifypwd.html',
+				controller: 'modifypwdController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('modifypwd');
+					}]
+				}
+			})
 			//产品详情
 			.state('product', {
 				url: '',

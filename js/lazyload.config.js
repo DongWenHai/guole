@@ -194,6 +194,14 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 			 			'./views/register/register.css'
 			 		]
 			 	},
+			 	//忘记密码
+			 	{
+			 		name: 'modifypwd',
+			 		files: [
+			 			'./views/modifypwd/modifypwdController.js',
+			 			'./views/modifypwd/modifypwd.css'
+			 		]
+			 	},
 			 	//商品详情
 			 	{
 			 		name: 'product',
