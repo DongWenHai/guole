@@ -9,20 +9,20 @@
 		<div class="usePhone padding">
 			<ion-list>
 				<ion-item class="item-input" ng-if="!isPhone">
-				    <input type="text" placeholder="请输入邮箱" ng-model="modifydata.email" />
+				    <input type="text" placeholder="请输入邮箱" ng-model="modifydata.email" ng-change="modifyCode()" />
 				</ion-item>
 				<ion-item class="item-input" ng-if="isPhone">
-				    <input type="text" placeholder="请输入11位手机号" ng-model="modifydata.phone" />
+				    <input type="text" placeholder="请输入11位手机号" ng-model="modifydata.phone" ng-change="modifyCode()" />
 				</ion-item>
 				<ion-item class="item-input">
-				    <input type="text" placeholder="请输入新密码" ng-model="modifydata.password" />
+				    <input type="password" placeholder="请输入新密码" ng-model="modifydata.password" />
 				</ion-item>
 				<ion-item class="item-input">
-				    <input type="text" placeholder="再次输入新密码" ng-model="modifydata.repassword" />
+				    <input type="password" placeholder="再次输入新密码" ng-model="modifydata.repassword" />
 				</ion-item>
 				<ion-item class="item-input padding-right">
 				    <input type="text" placeholder="请输入验证码" ng-model="modifydata.code" />
-				    <div class="button button-small button-balanced" ng-click="getcode()">获取验证码</div>
+				    <div class="button button-small button-balanced" ng-disabled="getCodeDisabled" ng-click="getcode()">{{getPhoneCode.time}}{{getPhoneCode.but}}</div>
 				</ion-item>
 			</ion-list>
 

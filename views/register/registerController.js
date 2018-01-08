@@ -64,6 +64,10 @@ angular.module('app')
 
 		$scope.codedata = '';
 
+		function modifyCodedata(){
+			$scope.codedata = '';
+		};
+
 		$scope.reg = {
 			phone: /^(\+86){0,1}1[35678]\d{9}$/,
 			password: /[0-9A-z]{6,16}/

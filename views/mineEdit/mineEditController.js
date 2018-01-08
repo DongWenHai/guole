@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('mineEditController',['$scope','$state','ActionSheet',function($scope,$state,ActionSheet){
+	.controller('mineEditController',['$scope','$state','ActionSheet','BombBox',function($scope,$state,ActionSheet,BombBox){
 		$scope.goState = function(stateName){
 			$state.go(stateName);
 		};
@@ -14,4 +14,11 @@ angular.module('app')
 				}
 			});
 		};
+
+		$scope.val = '123456';
+		$scope.showWriteBox = function(){
+			BombBox.writeBox($scope, function(e){
+				console.log($scope.val);
+			})
+		}
 	}])
