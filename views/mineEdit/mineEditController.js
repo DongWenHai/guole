@@ -1,10 +1,10 @@
 angular.module('app')
-	.controller('mineEditController',['$scope','$state','ActionSheet','BombBox',function($scope,$state,ActionSheet,BombBox){
+	.controller('mineEditController',['$scope','$state','ActionSheet','BombBox','Modal',function($scope,$state,ActionSheet,BombBox,Modal){
 		$scope.goState = function(stateName){
 			$state.go(stateName);
 		};
 
-		$scope.openSheet = function () {
+		/*$scope.openSheet = function () {
 			var closeSheet = ActionSheet.showSheet({
 				cancle: '<span class="dark">取消</span>',
 				typeone: '<span class="dark">拍照</span>',
@@ -13,12 +13,10 @@ angular.module('app')
 					closeSheet();
 				}
 			});
-		};
-
-		$scope.val = '123456';
-		$scope.showWriteBox = function(){
-			BombBox.writeBox($scope, function(e){
-				console.log($scope.val);
-			})
+		};*/
+		
+	 	Modal.initModal($scope);
+		$scope.showNickNameModal = function(){
+			Modal.openModal($scope);
 		}
 	}])

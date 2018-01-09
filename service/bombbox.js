@@ -19,22 +19,6 @@ angular.module('app')
 
 			loadingHide: function(){
 				$ionicLoading.hide();
-			},
-			//修改昵称
-			writeBox: function(scope,fn){
-				$ionicPopup.show({
-				    template: '<input type="text" autofocus="true" ng-model="val" />',
-				    title: '请输入昵称',
-				    scope: scope,
-				    buttons: [
-				      { text: '取消' },
-				      {
-				        text: '<b>保存</b>',
-				        type: 'button-balanced',
-				        onTap: fn
-				      }
-				    ]
-			    });
 			}
 
 		}
