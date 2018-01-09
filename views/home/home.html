@@ -23,18 +23,18 @@
 	</div>
 	<ion-content>
 		<ion-slide-box does-continue="{{banner.doesContinue}}" auto-play="banner.autoPlay" slide-interval="{{banner.slideInterval}}">
-		    <ion-slide ng-repeat="item in bannerimgsrc track by $index">
-		    	<img class="full-image" ng-src="{{item}}" />
+		    <ion-slide ng-repeat="item in data.banner track by $index">
+		    	<img class="full-image" ng-src="{{item.imgsrc}}" />
 		    </ion-slide>
 		</ion-slide-box>
 		<!-- 产品类型 -->
 		<div class="home-product-type">
 			<ul class="clearfix">
-				<li class="fl" ng-repeat="item in producttype track by $index" ng-click="goState(item.stateName)">
+				<li class="fl" ng-repeat="item in data.classify track by $index">
 					<span>
-						<img ng-src="{{item.imgsrc}}" />
+						<img ng-src="{{item.cicon}}" />
 					</span>
-					<p>{{item.name}}</p>
+					<p>{{item.cname}}</p>
 				</li>
 			</ul>			
 		</div>
