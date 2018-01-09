@@ -13,7 +13,8 @@ angular.module('app')
 				scope.modal.show();
 			},
 			closeModal: function (scope) {
-				//scope.modal.hide();
+				scope.modal.hide();
 			}
+			
 		};
 	}])

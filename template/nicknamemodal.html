@@ -1,5 +1,5 @@
 <ion-modal-view>
-	<ion-header-bar>
+	<ion-header-bar class="bar-balanced">
 		<div class="button button-clear" ng-click="goBack()">
 			<i class="icon ion-ios-arrow-left icon-light"></i>
 		</div>
@@ -7,8 +7,8 @@
 	</ion-header-bar>
 	<ion-content>
 		<div class="padding">
-			<input type="text" autofocus="true" ng-model="val" />
-			<div class="button button-balanced button-block">保存</div>
+			<input type="text" autofocus="autofocus" ng-model="val.name" />
+			<div class="button button-balanced button-block" ng-click="modifyNickname()">保存</div>
 		</div>
 	</ion-content>
 </ion-modal-view>
