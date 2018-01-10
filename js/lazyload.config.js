@@ -213,6 +213,7 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 			 	{
 			 		name: 'productdetail',
 			 		files: [
+			 			'./views/productdetail/productdetailController.js',
 			 			'./views/productdetail/productdetail.css'
 			 		]
 			 	},

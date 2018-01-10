@@ -43,17 +43,4 @@ angular.module('app')
 			$scope.onSlideChanged(index);
 		};
 
-		//选择商品数量
-		$scope.productNumb = 1;
-		$scope.increaseNumb = function(){
-			$scope.productNumb = parseInt($scope.productNumb) + 1;
-		};
-
-		$scope.decreaseNumb = function(){
-			if($scope.productNumb >1){
-				$scope.productNumb = $scope.productNumb -1;
-			}else{
-				$scope.productNumb = 1;
-			}
-		};
 	}])

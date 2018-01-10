@@ -9,6 +9,7 @@ angular.module('app')
 				.then(function(data){
 					BombBox.loadingHide();
 					$scope.data = data.data;
+					console.log($scope.data);
 					selectproduct();
 				})
 				.catch(function(err){
@@ -44,5 +45,9 @@ angular.module('app')
 			autoPlay: "true",
 			slideInterval: "2000"
 		};
+
+		$scope.goProductDetail = function(pid){
+			$state.go('product.productdetail', {pid: pid});
+		}
 
 	}])

@@ -283,9 +283,9 @@ angular.module('app')
 				}
 			})
 			.state('product.productdetail', {
-				url: '/productdetail',
+				url: '/productdetail/:pid',
 				templateUrl: './views/productdetail/productdetail.html',
-				controller: 'productController',
+				controller: 'productdetailController',
 				resolve: {
 					des: ['$ocLazyLoad', function ($ocLazyLoad) {
 						return $ocLazyLoad.load('productdetail');

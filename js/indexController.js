@@ -6,12 +6,12 @@ angular.module('app')
 
 		$rootScope.goBack = function(){
 			history.go(-1);
-		}
+		};
 
 		$rootScope.userinfor = {
 			phone: '',
-			isLogin: false,
+			isLogin: 0,
 			nickname: '',
-			uid: ''
-		}
+			uid: '12'
+		};
 	}])

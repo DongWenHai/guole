@@ -49,7 +49,7 @@
 			</div>
 			<div class="hotproducts white-bg">
 				<ul class="clearfix row row-wrap product-list">
-					<li class="fl col col-50" ng-repeat="item in hotproducts track by $index" ng-click="goState('product.productdetail')">
+					<li class="fl col col-50" ng-repeat="item in hotproducts track by $index" ng-click="goProductDetail(item.pid)">
 						<span><img class="full-image" ng-src="{{item.imgsrc}}" /></span>
 						<p class="product-name">{{item.name}}</p>
 						<p class="product-price assertive">￥{{item.price}}</p>
@@ -68,7 +68,7 @@
 			</div>
 			<div class="necessary-products white-bg">
 				<ul class="clearfix row row-wrap product-list">
-					<li class="fl col col-33 product-list" ng-repeat="item in necessaryProducts track by $index">
+					<li class="fl col col-33 product-list" ng-repeat="item in necessaryProducts track by $index" ng-click="goProductDetail(item.pid)">
 						<span><img class="full-image" ng-src="{{item.imgsrc}}" /></span>
 						<p class="product-name">{{item.name}}</p>
 						<p class="product-price assertive">￥{{item.price}}</p>
@@ -87,7 +87,7 @@
 			</div>
 			<div class="fashion-products white-bg">
 				<ul class="clearfix row row-wrap product-list">
-					<li class="fl col col-33" ng-repeat="item in fashionProduct track by $index">
+					<li class="fl col col-33" ng-repeat="item in fashionProduct track by $index" ng-click="goProductDetail(item.pid)">
 						<span><img class="full-image" ng-src="{{item.imgsrc}}" /></span>
 						<p class="product-name">{{item.name}}</p>
 						<p class="product-price assertive">￥{{item.price}}</p>
