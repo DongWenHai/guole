@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('loginController',['$scope','$state','isValid','BombBox','API','$rootScope',function($scope,$state,isValid,BombBox,API,$rootScope){
+	.controller('loginController',['$scope','$state','isValid','BombBox','API','$rootScope','$stateParams',function($scope,$state,isValid,BombBox,API,$rootScope,$stateParams){
 		
 		$scope.logindata = {
 			phone: '',
@@ -11,6 +11,7 @@ angular.module('app')
 			password: /[0-9A-z]{6,16}/
 		};
 		//login
+		console.log($stateParams.pid);
 		$scope.login = function(){
 			if(!valValid()){return}
 			BombBox.loadingShow();
@@ -25,7 +26,12 @@ angular.module('app')
 						$rootScope.userinfor.nickname = data.data.nickname;
 						$rootScope.userinfor.isLogin = data.data.isLogin;
 						$rootScope.userinfor.uid = data.data.uid;
-						$state.go('footer.home');
+						if($stateParams.pid){
+							$state.go('product.productdetail', {pid: $stateParams.pid});
+						}else{
+							$state.go('footer.home');
+						}
+						
 					}					
 				})
 				.catch(function(err){

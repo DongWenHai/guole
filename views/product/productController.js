@@ -1,15 +1,10 @@
 angular.module('app')
-	.controller('productController',['$scope','$state',function($scope,$state){
-		$scope.goState = function(stateName){
-			$state.go(stateName);
-		};
-
+	.controller('productController',['$rootScope','$scope','$state','API','BombBox',function($rootScope,$scope,$state,API,BombBox){
 		$scope.isActive = {
 			one: false,
 			two: true,
 			three: true
 		};
-
 		$scope.changePage = function(n){
 			if(n == 1){
 				$state.go('product.productdetail');
@@ -43,4 +38,13 @@ angular.module('app')
 			$scope.onSlideChanged(index);
 		};
 
+		$scope.addProductToCar = function(){
+			API.fetchGet('http://127.0.0.1:9000/addProductToCar', $rootScope.addProduct)
+				.then(function(data){
+					BombBox.warBox(data.data.msg);
+				})
+				.catch(function(err){
+					console.log(err);
+				})
+		}
 	}])

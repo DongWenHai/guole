@@ -9,7 +9,6 @@ angular.module('app')
 				.then(function(data){
 					BombBox.loadingHide();
 					$scope.data = data.data;
-					console.log($scope.data);
 					selectproduct();
 				})
 				.catch(function(err){
@@ -47,7 +46,11 @@ angular.module('app')
 		};
 
 		$scope.goProductDetail = function(pid){
-			$state.go('product.productdetail', {pid: pid});
+			if($rootScope.userinfor.isLogin == 1){
+				$state.go('product.productdetail', {pid: pid});
+			}else{
+				$state.go('login', {pid: pid});
+			}			
 		}
 
 	}])

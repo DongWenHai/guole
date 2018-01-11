@@ -240,7 +240,7 @@ angular.module('app')
 			})
 			//登录和注册
 			.state('login', {
-				url: '/login',
+				url: '/login/:pid',
 				templateUrl: './views/login/login.html',
 				controller: 'loginController',
 				resolve: {

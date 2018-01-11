@@ -44,6 +44,7 @@ angular.module('app')
 						BombBox.warBox(data.data.msg)
 						BombBox.loadingHide();
 					}else{
+						console.log(data);
 						BombBox.warBox(data.data.msg)
 						BombBox.loadingHide();
 						$scope.getCodeDisabled = true;

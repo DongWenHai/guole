@@ -1,10 +1,10 @@
 .home .header-mune{
-	width: 44px;
+	width: 88px;
 	padding-top:12px;
     position: fixed;
     top: 30px;
     right: 5px;
-    z-index: 999;
+    z-index: 999;  
 }
 .mune-u-t{
 	display:block;
@@ -13,12 +13,21 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+    text-align: right;
+	padding-right: 18px;
 }
 .mune-u-t>i{
 	font-size:20px;
 }
 .option-list{
 	padding:5px;
+}
+.option-list>div{
+	border-bottom:1px solid rgba(90,229,96,.5);
+}
+.option-list>div>i{
+	font-size: 24px;
+	padding-left: 8px;
 }
 .home .ion-record:before{
 	color: #ddd !important;
