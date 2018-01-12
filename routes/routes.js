@@ -5,6 +5,7 @@ angular.module('app')
 			.state('start', {
 				url: '/start',
 				templateUrl: './views/start/start.html',
+				controller: 'startController',
 				resolve: {
 					des: ['$ocLazyLoad', function ($ocLazyLoad) {
 						return $ocLazyLoad.load('start');

@@ -11,8 +11,9 @@ angular.module('app')
 					$rootScope.addProduct.pname = $scope.data.product[0].name;
 					$rootScope.addProduct.count = $scope.productNumb;
 					$rootScope.addProduct.address = $scope.data.address[0].defaultaddress;
-					$rootScope.addProduct.code = $scope.data.address[0].code;
+					$rootScope.addProduct.code = $scope.data.product[0].code;
 					$rootScope.addProduct.imgsrc = $scope.data.product[0].imgsrc;
+					$rootScope.addProduct.price = $scope.data.product[0].price;
 				})
 				.catch(function(err){
 					console.log(err);

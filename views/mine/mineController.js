@@ -1,6 +1,15 @@
 angular.module('app')
-	.controller('mineController',['$scope','$state',function($scope,$state){
-		$scope.goState = function(stateName){
-			$state.go(stateName);
-		};
+	.controller('mineController',['$rootScope','$scope','$state',function($rootScope,$scope,$state){
+		console.log(11);
+		$scope.hasLogin = false;
+		function isrequireLogin(){
+			if($rootScope.userinfor.isLogin == 1){
+				$scope.hasLogin = true;
+			}else{
+				$scope.hasLogin = false;
+			}
+		}
+		isrequireLogin();
+
+		
 	}])

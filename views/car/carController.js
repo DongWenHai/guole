@@ -1,8 +1,39 @@
 angular.module('app')
-	.controller('carController',['$scope','$state','$ionicListDelegate',function($scope,$state,$ionicListDelegate){
+	.controller('carController',['$rootScope','$scope','$state','$ionicListDelegate','API','BombBox',function($rootScope,$scope,$state,$ionicListDelegate,API,BombBox){
+		$scope.cardata = [];
+		function initCar(){
+			BombBox.loadingShow();
+			API.fetchGet('http://127.0.0.1:9000/initCar', {uid: $rootScope.userinfor.uid})
+				.then(function(data){
+					formatData(data.data);
+					BombBox.loadingHide();
+				})
+				.catch(function(err){
+					console.log(err);
+				})
+		}
+		initCar();
+
+		function formatData(o){
+			for(var i=0;i<o.length;i++){
+				$scope.cardata.push({});
+				$scope.cardata[i].pid = o[i].pid;
+				$scope.cardata[i].imgsrc = o[i].imgsrc;
+				$scope.cardata[i].productName = o[i].pname;
+				$scope.cardata[i].identifier = o[i].code;
+				$scope.cardata[i].price = o[i].price;
+				$scope.cardata[i].numb = o[i].count;
+				$scope.cardata[i].checkitem = false;
+			}
+		}
+		
 
 		$scope.goConfirmPay = function(){
 			var order = $scope.getconfirmorder();
+			if(order.length<1){
+				BombBox.warBox('请选择商品');
+				return;
+			}
 			var c = JSON.stringify(order);
 			$state.go('confirmpay',{confirm: c});
 		};
@@ -16,41 +47,6 @@ angular.module('app')
 			}
 			return dataObj;
 		};
-
-		$scope.cardata = [
-			{
-				imgsrc:'./images/brand_go3x.png',
-				productName:'brand多口无线冲',
-				identifier:'2211056',
-				price:200.00,
-				numb:1,
-				checkitem:false
-			},
-			{
-				imgsrc:'./images/classy1_go@3x.png',
-				productName:'classy1 豆豆版',
-				identifier:'2211056',
-				price:98.00,
-				numb:1,
-				checkitem:false
-			},
-			{
-				imgsrc:'./images/zuixin_go3x.png',
-				productName:'化妆盒移动电源',
-				identifier:'2211056',
-				price:200.00,
-				numb:1,
-				checkitem:false
-			},
-			{
-				imgsrc:'./images/folding@3x.png',
-				productName:'户外充电太阳能折叠包',
-				identifier:'2211056',
-				price:130.01,
-				numb:1,
-				checkitem:false
-			}
-		];
 
 		$scope.totalMoney = '0.00';
 		$scope.allCheck = false;
@@ -103,9 +99,17 @@ angular.module('app')
 			$scope.countTotalMoney();
 		};
 
-		$scope.delete = function(index){
-			console.log(index);
+		$scope.delete = function(index, pid){
 			$scope.cardata.splice(index,1);
 			$scope.countTotalMoney();
+			API.fetchGet('http://127.0.0.1:9000/deleteCarProduct',{pid: pid, uid: $rootScope.userinfor.uid})
+				.then(function(data){
+					if(data.data.statusCode != 600){
+						BombBox.warBox(data.data.msg);
+					}
+				})
+				.catch(function(err){
+					console.log(err);
+				})
 		}
 	}])

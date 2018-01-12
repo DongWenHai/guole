@@ -10,9 +10,9 @@ angular.module('app')
 
 		$rootScope.userinfor = {
 			phone: '',
-			isLogin: 1,
+			isLogin: 0,
 			nickname: '',
-			uid: '12'
+			uid: ''
 		};
 
 		$rootScope.addProduct = {
@@ -20,6 +20,7 @@ angular.module('app')
 			pid:'',
 			pname: '',
 			count: '',
+			price:'',
 			address: '',
 			code:'',
 			imgsrc:''

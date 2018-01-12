@@ -1,12 +1,8 @@
 angular.module('app')
-	.controller('paynowController',['$scope','$state','$stateParams',function($scope,$state,$stateParams){
+	.controller('paynowController',['$rootScope','$scope','$state','$stateParams',function($rootScope,$scope,$state,$stateParams){
 
 		$scope.order = $stateParams.order == [] ? [] : JSON.parse($stateParams.order);
 		$scope.allMoney = $stateParams.allMoney == [] ? 0 : $stateParams.allMoney;
-
-		$scope.goState = function(stateName){
-			$state.go(stateName);
-		};
 
 		$scope.psdvalue = '';
 		$scope.psdLength = 0;

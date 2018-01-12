@@ -19,6 +19,7 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 	 			{
 			 		name: 'start',
 			 		files: [
+			 			'./views/start/startController.js',
 			 			'./views/start/start.css'
 			 		]
 			 	},
