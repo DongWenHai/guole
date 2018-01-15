@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('registerController',['$scope','$state','API','isValid','BombBox','formatTime','$interval',function($scope,$state,API,isValid,BombBox,formatTime,$interval){
+	.controller('registerController',['$scope','$state','API','isValid','BombBox','formatTime','$interval','ImgCode',function($scope,$state,API,isValid,BombBox,formatTime,$interval,ImgCode){
 		//control the button of sending verification code
 		$scope.codebutton = {
 			loading: false,
@@ -7,6 +7,8 @@ angular.module('app')
 			retext: '再次发送',
 			time: 60
 		};
+		//init image code
+		var imgCode = ImgCode.getGVerify('imgcode');
 		//check phone
 		function isPhone(){
 			if(!isValid.isNotEmputy($scope.registerData.phone)){
@@ -98,7 +100,7 @@ angular.module('app')
 			}else if(!isValid.isNotEmputy($scope.registerData.imgCode)){
 				BombBox.warBox('图片验证码不能为空')
 				return false;
-			}else if(!isValid.isEqual($scope.registerData.imgCode,'5o7v')){
+			}else if(!imgCode.validate($scope.registerData.imgCode)){
 				BombBox.warBox('图片验证码不正确')
 				return false;
 			}else if(!isValid.isNotEmputy($scope.registerData.phoneCode)){
