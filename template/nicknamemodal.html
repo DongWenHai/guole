@@ -1,14 +1,20 @@
 <ion-modal-view>
 	<ion-header-bar class="bar-balanced">
-		<div class="button button-clear" ng-click="goBack()">
+		<div class="button button-clear" ng-click="closeModal()">
 			<i class="icon ion-ios-arrow-left icon-light"></i>
 		</div>
-		<h1 class="title">请输入昵称</h1>
+		<h1 class="title">{{modalControl.title}}</h1>
 	</ion-header-bar>
 	<ion-content>
-		<div class="padding">
+		<div class="padding" ng-if="modalControl.isnickname">
 			<input type="text" autofocus="autofocus" ng-model="val.name" />
 			<div class="button button-balanced button-block" ng-click="modifyNickname()">保存</div>
+		</div>
+		<div class="" ng-if="modalControl.issex">
+			<ion-radio ng-model="val.sex" ng-value="'男'">男</ion-radio>
+			<ion-radio ng-model="val.sex" ng-value="'女'">女</ion-radio>
+			<ion-radio ng-model="val.sex" ng-value="'保密'">保密</ion-radio>
+			<div class="button button-balanced button-block" ng-click="modifySex()">保存</div>
 		</div>
 	</ion-content>
 </ion-modal-view>

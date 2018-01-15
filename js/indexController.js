@@ -12,7 +12,7 @@ angular.module('app')
 			phone: '',
 			isLogin: 0,
 			nickname: '',
-			uid: ''
+			uid: '12'
 		};
 
 		$rootScope.addProduct = {

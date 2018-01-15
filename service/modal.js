@@ -1,8 +1,8 @@
 angular.module('app')
 	.factory('Modal', ['$ionicModal', function ($ionicModal) {
 		return {
-			initModal: function (scope) {
-				$ionicModal.fromTemplateUrl('./template/nicknamemodal.html', {
+			initModal: function (scope, templateUrl) {
+				$ionicModal.fromTemplateUrl(templateUrl, {
 					scope: scope,
 					animation: 'slide-in-up'
 				}).then(function(modal) {
