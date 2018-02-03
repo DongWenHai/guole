@@ -23,13 +23,21 @@ angular.module('app')
 		$scope.modifyCode = function(){
 			$scope.modifydata.getCode = '';
 		}
-
+		//重置表单
+		function initModifydata(){
+			for(var key in $scope.modifydata){
+				$scope.modifydata[key] = '';
+			}
+		}
+		//使用手机修改密码
 		$scope.usePhone = function(){
 			$scope.isPhone = true;
+			initModifydata();
 		};
-
+		//使用邮箱修改密码
 		$scope.useEmail = function(){
 			$scope.isPhone = false;
+			initModifydata();
 		};
 
 		//getCode
